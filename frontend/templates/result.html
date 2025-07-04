@@ -1,0 +1,30 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="results-container">
+        <h1>Your Analysis Results</h1>
+        
+        <!-- Crop Recommendation -->
+        <div class="result-card">
+            <h2>Recommended Crop</h2>
+            <p>{{ crop_name }} ({{ confidence }}% confidence)</p>
+            <p><strong>Why?</strong> {{ explanation }}</p>
+        </div>
+
+        <!-- Disease Prediction -->
+        <div class="result-card">
+            <h2>Disease Detection</h2>
+            <img src="{{ disease_image_path }}" alt="Disease">
+            <p>{{ disease_name }} ({{ disease_confidence }}%)</p>
+            <p><strong>Treatment:</strong> {{ treatment_advice }}</p>
+        </div>
+
+        <a href="/" class="button">Back to Home</a>
+    </div>
+</body>
+</html>
